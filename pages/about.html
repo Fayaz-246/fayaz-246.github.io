@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fayaz</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="./ico.png" />
+  </head>
+  <body>
+    <nav>
+      <h2>Fayaz</h2>
+      <ul>
+        <li><a href="./contact.html">Contact </a></li>
+        <li><a href="../index.html">Home </a></li>
+      </ul>
+    </nav>
+    <div class="container2">
+      <span>
+        <h1 id="textWrite"></h1>
+      </span>
+    </div>
+    <h4 class="class_p">Hey! I am Fayaz!<br>A student studying in 6th Grade!</h4>
+    <script>
+      var i = 0;
+      var txt = "Fayaz";
+      var speed = 100;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("textWrite").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      window.onload = typeWriter();
+    </script>
+  </body>
+</html>
